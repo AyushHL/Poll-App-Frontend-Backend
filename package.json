@@ -11,13 +11,15 @@
     "build:backend": "pnpm --filter backend build",
     "build:frontend": "pnpm --filter frontend build",
     "start": "pnpm --filter backend start",
-    "install:all": "pnpm install"
+    "install:all": "pnpm install",
+    "postbuild": "cpx _redirects dist"
   },
   "workspaces": [
     "backend",
     "frontend"
   ],
   "devDependencies": {
+    "cpx": "^1.5.0",
     "pnpm": "^8.0.0"
   },
   "engines": {
